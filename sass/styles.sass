@@ -1,0 +1,79 @@
+@import _variables
+@import _fonts
+@import _alignments
+
+@media all and (min-width: 1px)
+  button
+    outline: 0
+
+  .atm-tutorialWrapp
+    position: fixed
+    background-color: $whiteColor
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    width: 100%
+    height: 100%
+    z-index: 99999
+    font-family: 'Telefonica-Regular'
+
+    .atm-tutorial
+      background-color: $skyColor
+      color: $whiteColor
+      text-align: center
+      padding: 0 0
+      position: relative
+      font-family: 'Telefonica-Hand'
+      font-weight: 100
+      font-size: 20px
+      height: 50px
+      @include section_middle_center
+
+      .atm-backIcon
+        position: absolute
+        left: 20px
+        top: 0
+        bottom: 0
+        margin: auto 0
+        width: 20px
+        height: 20px
+        padding: 0
+        border: 0
+        background-color: $skyColor
+
+        svg
+          path
+            fill: $whiteColor
+
+  .atm-bodyTutorial
+    height: calc(100% - 50px)
+    @include section_middle_center
+
+    h2
+      font-weight: 100
+      font-size: 20px
+      width: 100%
+      text-align: center
+    
+    .atm-omitirTutorial
+      width: 100%
+      color: $skyColor
+      border: 0
+      background-color: $whiteColor
+  
+  .atm-sliderTutorial
+    width: 70vw
+    overflow: hidden
+    margin: 20px auto
+    position: relative
+
+    .atm-wrappSlider
+      @include section_top_left
+
+      .atm-slideTuto
+        width: 70vw !important
+        @include section_middle_center
+  
+  .dotsSlider
+    
