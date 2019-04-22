@@ -47,6 +47,7 @@
             fill: $whiteColor
 
   .atm-bodyTutorial
+    background-color: $whiteColor
     height: calc(100% - 50px)
     @include section_middle_center
 
@@ -61,23 +62,34 @@
       color: $skyColor
       border: 0
       background-color: $whiteColor
+      position: relative
+
   
   .atm-sliderTutorial
-    width: 70vw
+    width: 75vw
     overflow: hidden
-    margin: 20px auto
+    margin: 0 auto
     position: relative
 
     .atm-wrappSlider
-      @include section_top_left
+      @include section_middle_left
+      transition: all ease-in-out .3s
 
       .atm-slideTuto
-        width: 70vw !important
+        width: 75vw !important
         @include section_middle_center
+        
+        p
+          width: 100%
+          margin: 20px 0 0
+          text-align: center
+          opacity: .6
+          &:last-child
+            font-size: 13px
   
   .atm-dotsSlider
     @include section_middle_center
-    width: 70vw
+    width: 75vw
     margin: 20px 0 
 
     > button
@@ -93,3 +105,30 @@
     .activeDot
       opacity: 1
       background-color: $greenColor
+    
+  .atm-greenButton
+    font-size: 14px
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: $whiteColor
+    background-color: $greenColor
+    border: 0
+    padding: 17px 0
+    border-radius: 7px
+    width: calc(100% - 20px)
+    position: fixed
+    bottom: 10px
+    left: 10px
+    right: 10px
+    z-index: -1
+    &:active
+      bottom: 8px
+
+@media all and (min-height: 481px)
+  .atm-bodyTutorial
+    .atm-omitirTutorial
+      margin-top: 40px
+    
+  .atm-dotsSlider
+    margin-top: 50px
+

@@ -4,7 +4,7 @@ let slider = () =>{
   let slide = wrappTuto.getElementsByClassName('atm-slideTuto');
 
   /**Añadiendo el ancho segun la cantidad de slider */
-  let anchoTotal = parseInt(slide.length) * 70;
+  let anchoTotal = parseInt(slide.length) * 75;
   let wrappSlide = wrappTuto.getElementsByClassName('atm-wrappSlider');
   wrappSlide[0].style.width = anchoTotal + 'vw';
 
@@ -28,13 +28,25 @@ let slider = () =>{
   /*Añadiendo el dinamismo del slider*/
   slideTo = (element) => {
     let id = element.getAttribute('data-id');
-    // console.log(id);
     removeActive();
     document.getElementById('slide' + id).classList.add('activeSlide');
     document.getElementById('dots' + id).classList.add('activeDot');
+
+    /*Cambiando el slider*/
+    let wrappSlider = document.getElementsByClassName('atm-wrappSlider');
+    let moveTo = parseInt(id) * 75;
+    wrappSlider[0].style.transform = 'translateX(-'+moveTo+'vw)';
+    
+    if (id == 2) {
+      document.getElementById('atm-omitirTutorial').style.zIndex = '-1';
+      document.getElementsByClassName('atm-greenButton')[0].style.zIndex = '99';
+    } else {
+      document.getElementById('atm-omitirTutorial').style.zIndex = '99';
+      document.getElementsByClassName('atm-greenButton')[0].style.zIndex = '-1';
+    }
   }
 
-  removeActive = () =>{
+  removeActive = () => {
     let dots = document.getElementsByClassName('dots');
     for (let i = 0; i < slide.length; i++) {
       dots[i].classList.remove('activeDot');
@@ -43,6 +55,6 @@ let slider = () =>{
   }
 }
 
-window.onload = ()=>{
+window.onload = () => {
   slider();
 };
