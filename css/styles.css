@@ -432,4 +432,39 @@
         -ms-flex-align: center;
             align-items: center;
   }
+  .atm-dotsSlider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 70vw;
+    margin: 20px 0;
+  }
+  .atm-dotsSlider > button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #000000;
+    margin: 0 8px;
+    opacity: .4;
+    border: 0;
+    padding: 0;
+  }
+  .atm-dotsSlider .activeDot {
+    opacity: 1;
+    background-color: #84e200;
+  }
 }

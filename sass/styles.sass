@@ -75,5 +75,21 @@
         width: 70vw !important
         @include section_middle_center
   
-  .dotsSlider
+  .atm-dotsSlider
+    @include section_middle_center
+    width: 70vw
+    margin: 20px 0 
+
+    > button
+      width: 15px
+      height: 15px
+      border-radius: 50%
+      background: $blackColor
+      margin: 0 8px
+      opacity: .4
+      border: 0
+      padding: 0
     
+    .activeDot
+      opacity: 1
+      background-color: $greenColor

@@ -10,7 +10,12 @@ slider = () =>{
 
   /*Añadiendo los doots*/
   for (let i = 0; i < slide.length; i++) {
-    dots = dots + '<div data-id="atmSlideTo'+i+'"></div>';
+    slide[i].setAttribute('id', 'slide'+i); /*Añadiendo id*/
+    if(i == 0){
+      dots = dots + '<button data-id="'+i+'" class="activeDot"></button>'; /*Añadiendo dots*/
+    } else {
+      dots = dots + '<button data-id="'+i+'"></button>'; /*Añadiendo dots*/
+    }
   }
 
   let wrapDots = document.createElement("div"); 
