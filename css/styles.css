@@ -499,6 +499,12 @@
   .atm-greenButton:active {
     bottom: 8px;
   }
+  .greenButton {
+    color: #5AC503;
+    border: 0;
+    background-color: #ffffff;
+    padding-top: 10px;
+  }
 }
 
 @media all and (min-height: 481px) {
