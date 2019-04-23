@@ -129,6 +129,104 @@
     border: 0
     background-color: $whiteColor
     padding-top: 10px
+  
+  /*Footer icon*/
+  // .footer-links
+
+  
+  .footer-links
+    transform: translateX(8.7vw)
+  
+  .atm-overflow
+    position: fixed
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    background-color: rgba($blackColor, .8)
+    width: 100%
+    height: 100%
+    z-index: 99997
+
+  .atm-mejorarPlan
+    position: fixed
+    left: 17vw
+    // top: 5px
+    bottom: -30px
+    width: 80px
+    padding: 0
+    height: 80px
+    @include section_top_center
+    // border: 1px solid #333
+    border-radius: 50%
+    z-index: 99998
+    overflow: hidden
+    background-color: $whiteColor
+    a
+      text-decoration: none
+      text-align: center
+      margin: 5px 0 0
+      padding-top: 30px
+      position: relative
+      display: block
+      width: 100%
+      background-color: rgba($whiteColor, 0)
+      font-size: 10px
+      &::before
+        content: ''
+        width: 13px
+        height: 24px
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        margin: auto
+        background: url('http://servicios.movistar.com.pe/images_publica/atm-tutorial/images/icono-footer.png') no-repeat 
+        background-position: top left
+        background-size: cover
+
+  .atm-toltip
+    position: fixed
+    background-color: $whiteColor
+    border-radius: 10px
+    width: 180px
+    bottom: 90px
+    @include section_middle_center
+    left: 4vw
+    z-index: 99998
+    padding: 10px
+    &::before
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 50%
+      width: 0
+      height: 0
+      border: 18px solid transparent
+      border-top-color: $whiteColor
+      border-bottom: 0
+      margin-left: -18px
+      margin-bottom: -18px
+  .atm-contentBubble
+    margin-left: 10px
+    width: 70%
+    strong
+      font-family: 'Telefonica-Bold'
+      line-height: 14px !important
+      font-size: 14px
+      display: block
+      padding: 0
+      margin: 0
+    p
+      font-size: 12px
+      margin: 5px 0 0
+      padding: 0
+  
+  #atm-closeTutorial
+    position: absolute
+    top: 10px
+    right: 10px
+
 
 @media all and (min-height: 481px)
   .atm-bodyTutorial
