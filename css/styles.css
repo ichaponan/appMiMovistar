@@ -495,15 +495,71 @@
     left: 10px;
     right: 10px;
     z-index: -1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .atm-greenButton:active {
     bottom: 8px;
+  }
+  .atm-greenButton a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-decoration: none !important;
   }
   .greenButton {
     color: #5AC503;
     border: 0;
     background-color: #ffffff;
     padding-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   /*Footer icon*/
   .footer-links {
@@ -522,6 +578,9 @@
     z-index: 99997;
   }
   .atm-mejorarPlan {
+    background-image: url("http://servicios.movistar.com.pe/images_publica/atm-tutorial/images/icono-footer2.png");
+    background-position: top center;
+    background-repeat: no-repeat;
     position: fixed;
     left: 17vw;
     bottom: -30px;
@@ -570,7 +629,6 @@
     left: 0;
     right: 0;
     margin: auto;
-    background: url("http://servicios.movistar.com.pe/images_publica/atm-tutorial/images/icono-footer.png") no-repeat;
     background-position: top left;
     background-size: cover;
   }
@@ -598,7 +656,7 @@
         -ms-flex-align: center;
             align-items: center;
     left: 4vw;
-    z-index: 99998;
+    z-index: 999999;
     padding: 10px;
   }
   .atm-toltip::before {
@@ -635,6 +693,65 @@
     position: absolute;
     top: 10px;
     right: 10px;
+  }
+  #wrappTutorialGTM {
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+  .atm-coverIcono {
+    position: fixed;
+    z-index: 999999;
+    bottom: 0;
+    left: 16vw;
+    width: 90px;
+    height: 100px;
+  }
+  #wrappRecordatorio {
+    position: fixed;
+    bottom: -5px;
+    left: 15vw;
+    z-index: 99999;
+    width: 100px;
+  }
+  #wrappRecordatorio .wrappRecordatorio {
+    width: 100%;
+    position: relative;
+  }
+  #wrappRecordatorio .wrappRecordatorio #atm-closeRecordatorio {
+    background-color: #d8d8d8;
+    width: 30px;
+    height: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3;
+  }
+  #wrappRecordatorio .wrappRecordatorio #recordatoriobtn {
+    width: 100%;
+    position: relative;
+    z-index: 1;
   }
 }
 

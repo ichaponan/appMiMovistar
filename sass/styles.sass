@@ -121,14 +121,21 @@
     left: 10px
     right: 10px
     z-index: -1
+    @include section_middle_center
     &:active
       bottom: 8px
+    a
+      @include section_middle_center
+      text-decoration: none !important
     
   .greenButton
     color: $greenColor
     border: 0
     background-color: $whiteColor
     padding-top: 10px
+    text-align: center
+    text-decoration: none
+    @include section_middle_center
   
   /*Footer icon*/
   // .footer-links
@@ -149,6 +156,9 @@
     z-index: 99997
 
   .atm-mejorarPlan
+    background-image: url('http://servicios.movistar.com.pe/images_publica/atm-tutorial/images/icono-footer2.png')
+    background-position: top center
+    background-repeat: no-repeat
     position: fixed
     left: 17vw
     // top: 5px
@@ -181,7 +191,7 @@
         left: 0
         right: 0
         margin: auto
-        background: url('http://servicios.movistar.com.pe/images_publica/atm-tutorial/images/icono-footer.png') no-repeat 
+        // background: url('http://servicios.movistar.com.pe/images_publica/atm-tutorial/images/icono-footer.png') no-repeat 
         background-position: top left
         background-size: cover
 
@@ -193,7 +203,7 @@
     bottom: 90px
     @include section_middle_center
     left: 4vw
-    z-index: 99998
+    z-index: 999999
     padding: 10px
     &::before
       content: ''
@@ -226,6 +236,49 @@
     position: absolute
     top: 10px
     right: 10px
+  
+  #wrappTutorialGTM
+    position: fixed
+    z-index: 999999
+    top: 0
+    left: 0
+    display: none
+
+  .atm-coverIcono
+    position: fixed
+    z-index: 999999
+    bottom: 0
+    left: 16vw
+    width: 90px
+    height: 100px
+    // background-color: red
+
+  #wrappRecordatorio
+    position: fixed
+    bottom: -5px
+    left: 15vw  
+    z-index: 99999
+    width: 100px
+    .wrappRecordatorio
+      width: 100%
+      position: relative
+      #atm-closeRecordatorio
+        background-color: $grayColor
+        width: 30px
+        height: 30px
+        @include section_middle_center
+        border: none
+        border-radius: 50%
+        position: absolute
+        right: 0
+        top: 0
+        z-index: 3
+
+      #recordatoriobtn
+        width: 100%
+        position: relative
+        z-index: 1
+    // background-color: red
 
 
 @media all and (min-height: 481px)
