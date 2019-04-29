@@ -78,23 +78,31 @@
       .atm-slideTuto
         width: 75vw !important
         @include section_middle_center
-        
         p
           width: 100%
-          margin: 20px 0 0
+          margin: 10px 0 0
           text-align: center
           opacity: .6
           &:last-child
             font-size: 13px
+        &:first-child
+          img
+            width: 215px!important
+        &:nth-child(2)
+          img
+            width: 219px!important
+        &:last-child
+          img
+            width: 100px!important
   
   .atm-dotsSlider
     @include section_middle_center
     width: 75vw
-    margin: 20px 0 
+    margin: 20px 0 0
 
     > button
-      width: 15px
-      height: 15px
+      width: 20px
+      height: 20px
       border-radius: 50%
       background: $blackColor
       margin: 0 8px
@@ -172,37 +180,37 @@
     z-index: 99998
     overflow: hidden
     background-color: $whiteColor
-    a
-      text-decoration: none
-      text-align: center
-      margin: 5px 0 0
-      padding-top: 30px
-      position: relative
-      display: block
-      width: 100%
-      background-color: rgba($whiteColor, 0)
-      font-size: 10px
-      &::before
-        content: ''
-        width: 13px
-        height: 24px
-        position: absolute
-        top: 0
-        left: 0
-        right: 0
-        margin: auto
-        // background: url('http://servicios.movistar.com.pe/images_publica/atm-tutorial/images/icono-footer.png') no-repeat 
-        background-position: top left
-        background-size: cover
+    // a
+    //   text-decoration: none
+    //   text-align: center
+    //   margin: 5px 0 0
+    //   padding-top: 30px
+    //   position: relative
+    //   display: block
+    //   width: 100%
+    //   background-color: rgba($whiteColor, 0)
+    //   font-size: 10px
+    //   &::before
+    //     content: ''
+    //     width: 13px
+    //     height: 24px
+    //     position: absolute
+    //     top: 0
+    //     left: 0
+    //     right: 0
+    //     margin: auto
+    //     // background: url('http://servicios.movistar.com.pe/images_publica/atm-tutorial/images/icono-footer.png') no-repeat 
+    //     background-position: top left
+    //     background-size: cover
 
   .atm-toltip
     position: fixed
     background-color: $whiteColor
     border-radius: 10px
-    width: 180px
+    width: 220px
     bottom: 90px
     @include section_middle_center
-    left: 4vw
+    left: 3vw
     z-index: 999999
     padding: 10px
     &::before
@@ -223,7 +231,7 @@
     strong
       font-family: 'Telefonica-Bold'
       line-height: 14px !important
-      font-size: 14px
+      font-size: 13px
       display: block
       padding: 0
       margin: 0
@@ -284,8 +292,8 @@
 @media all and (min-height: 481px)
   .atm-bodyTutorial
     .atm-omitirTutorial
-      margin-top: 40px
+      margin-top: 30px
     
   .atm-dotsSlider
-    margin-top: 50px
+    margin-top: 40px
 
