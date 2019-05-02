@@ -254,188 +254,231 @@
   text-align: justify;
 }
 
-.wrappCeluAviso {
-  background-color: #ffffff;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-family: sans-serif;
+@media all and (min-width: 1px) {
+  .wrappCeluAviso {
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .wrappCeluAviso::before {
+    content: '';
+    background-image: url(../images/m.svg);
+    background-position: 117% 105%;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: .2;
+    z-index: 1;
+  }
+  .wrappCeluAviso .atm-section1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .wrappCeluAviso .atm-section1 .atm-adornos {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .wrappCeluAviso .atm-section1 .atm-adornos img {
+    width: 30%;
+  }
+  .wrappCeluAviso .atm-section1 .atm-celuWrapp {
+    width: 40%;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .wrappCeluAviso .atm-section1 .atm-celuWrapp .atm-celu {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+  }
+  .wrappCeluAviso .atm-section1 .atm-celuWrapp .atm-isologo {
+    position: absolute;
+    top: 0;
+    width: 70%;
+    bottom: 0;
+    margin: auto;
+  }
+  .wrappCeluAviso .atm-section1 .atm-sombra {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .wrappCeluAviso .atm-section1 .atm-sombra img {
+    width: 35%;
+  }
+  .wrappCeluAviso .atm-section2 {
+    width: 80%;
+    position: relative;
+    z-index: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .wrappCeluAviso .atm-section2 h2 {
+    color: #3AD5F1;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0 0;
+  }
+  .wrappCeluAviso .atm-section2 p {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+  .wrappCeluAviso .atm-section2 button {
+    background-color: #00C600;
+    color: #ffffff;
+    border: 0px solid;
+    outline: 0;
+    padding: 15px 25px;
+    border-radius: 25px;
+    position: relative;
+    display: block;
+    -webkit-transition: all ease-in .4s;
+    transition: all ease-in .4s;
+  }
+  .wrappCeluAviso .atm-section2 button:active {
+    -webkit-transition: all ease-in .4s;
+    transition: all ease-in .4s;
+    top: 3px;
+  }
 }
 
-.wrappCeluAviso::before {
-  content: '';
-  background-image: url(../images/m.svg);
-  background-position: 117% 105%;
-  background-repeat: no-repeat;
-  background-size: 50%;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  opacity: .4;
-  z-index: 1;
-}
-
-.wrappCeluAviso .atm-adornos {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.wrappCeluAviso .atm-adornos img {
-  width: 30vw;
-}
-
-.wrappCeluAviso .atm-celuWrapp {
-  width: 40vw;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.wrappCeluAviso .atm-celuWrapp .atm-celu {
-  width: 100%;
-  position: relative;
-  z-index: 2;
-}
-
-.wrappCeluAviso .atm-celuWrapp .atm-isologo {
-  position: absolute;
-  top: 0;
-  width: 70%;
-  bottom: 0;
-  margin: auto;
-}
-
-.wrappCeluAviso .atm-sombra {
-  width: 100%;
-  position: relative;
-  z-index: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.wrappCeluAviso .atm-sombra img {
-  width: 35vw;
-}
-
-.wrappCeluAviso article {
-  width: 80%;
-  position: relative;
-  z-index: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.wrappCeluAviso article h2 {
-  color: #3AD5F1;
-  width: 100%;
-  text-align: center;
-  margin: 10px 0 0;
-}
-
-.wrappCeluAviso article p {
-  width: 100%;
-  text-align: center;
-  margin: 10px 0;
-}
-
-.wrappCeluAviso article button {
-  background-color: #00C600;
-  color: #ffffff;
-  border: 0px solid;
-  outline: 0;
-  padding: 15px 25px;
-  border-radius: 25px;
-  position: relative;
-  display: block;
-  -webkit-transition: all ease-in .4s;
-  transition: all ease-in .4s;
-}
-
-.wrappCeluAviso article button:active {
-  -webkit-transition: all ease-in .4s;
-  transition: all ease-in .4s;
-  top: 3px;
+@media all and (min-width: 480px) {
+  .wrappCeluAviso .atm-section1 {
+    width: 40%;
+  }
+  .wrappCeluAviso .atm-section1 .atm-adornos img {
+    width: 40%;
+  }
+  .wrappCeluAviso .atm-section1 .atm-celuWrapp {
+    width: 55%;
+  }
+  .wrappCeluAviso .atm-section2 {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .wrappCeluAviso .atm-section2 h2,
+  .wrappCeluAviso .atm-section2 p {
+    text-align: left;
+  }
 }
