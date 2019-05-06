@@ -277,6 +277,29 @@
   }
 }
 
+@keyframes shake {
+  from,
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+            transform: translate3d(-10px, 0, 0);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+            transform: translate3d(10px, 0, 0);
+  }
+}
+
 @-webkit-keyframes wobble {
   from {
     -webkit-transform: translate3d(0, 0, 0);
@@ -349,7 +372,7 @@
     right: 0;
     width: 100%;
     height: 100%;
-    z-index: 9999;
+    z-index: 999999;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -511,12 +534,12 @@
             align-items: flex-start;
   }
   .wrappCeluAviso .atm-section2 .atm-titulo {
-    font-weight: 700;
-    font-size: 25px;
     color: #3AD5F1;
     width: 100%;
     text-align: center;
     margin: 10px 0 0;
+    font-weight: 700;
+    font-size: 25px;
   }
   .wrappCeluAviso .atm-section2 p {
     width: 100%;
@@ -553,7 +576,7 @@
     width: 55%;
   }
   .wrappCeluAviso .atm-section2 {
-    width: 20%;
+    width: 50%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

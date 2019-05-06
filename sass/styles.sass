@@ -1,5 +1,6 @@
 @import _alignments
 @import _variables
+@import _animations
 
 @media all and (min-width: 1px)
   .wrappCeluAviso
@@ -28,6 +29,10 @@
     
     .atm-section1
       @include section_middle_center
+      animation-name: wobble
+      animation-direction: normal
+      animation-duration: 1s
+      animation-iteration-count: infinite
       .atm-adornos
         width: 100%
         @include section_middle_center
@@ -65,7 +70,9 @@
       z-index: 2
       @include section_top_center  
         
-      h2
+      .atm-titulo
+        font-weight: 700
+        font-size: 25px
         color: $skyColor
         width: 100%
         text-align: center
@@ -100,8 +107,8 @@
       .atm-celuWrapp
         width: 55%
     .atm-section2
-      width: 50%
+      width: 20%
       @include section_top_left  
-      h2,
+      .atm-titulo,
       p
         text-align: left

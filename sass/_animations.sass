@@ -1,0 +1,33 @@
+@-webkit-keyframes shake 
+  from,
+  to
+    transform: translate3d(0, 0, 0)
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% 
+    transform: translate3d(-10px, 0, 0)
+
+  20%,
+  40%,
+  60%,
+  80%
+    transform: translate3d(10px, 0, 0)
+
+@keyframes wobble
+  from
+    transform: translate3d(0, 0, 0)
+  15%
+    transform: translate3d(-8%, 0, 0) rotate3d(0, 0, 1, -5deg)
+  30%
+    transform: translate3d(6%, 0, 0) rotate3d(0, 0, 1, 3deg)
+  45%
+    transform: translate3d(-4%, 0, 0) rotate3d(0, 0, 1, -3deg)
+  60%
+    transform: translate3d(2%, 0, 0) rotate3d(0, 0, 1, 2deg)
+  75%
+    transform: translate3d(-1%, 0, 0) rotate3d(0, 0, 1, -1deg)
+  to
+    transform: translate3d(0, 0, 0)
