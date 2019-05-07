@@ -8,11 +8,22 @@
   | validacion: validacion de texto para eliminar el tag ejm. '=,plan datos' que el innerText del tag sea = a plan datos
   | destroy: true / false -- Destruir el tag o solo ocultarlo 
   ------------------------------------------------------
-**/ 
+**/
+
 let elmHideTag = {
   "elementos": [
-    {'tagElement': '.tagelemento', 'busqueda': 'all', 'validacion': '!=,222', 'destroy': true},
-    {'tagElement': '#ooculta', 'busqueda': '1', 'validacion': '!=,undefined', 'destroy': false}
+    {
+      'tagElement': '.navigation > .menu > li:nth-child(2)',
+      'busqueda': '1',
+      'validacion': '==,PLAN',
+      'destroy': true
+    },
+    {
+      'tagElement': '.tagelemento',
+      'busqueda': 'all',
+      'validacion': '==,222',
+      'destroy': false
+    }
   ]
 }
 /**
@@ -35,19 +46,23 @@ let _searchHideElements = (tagElement, busqueda, validacion, destroy) => {
       stopIntervalAll = parseInt(stopIntervalAll) + 1;
 
       if (tagAll.length > 0) {
-        console.log("Tags encontrados");
+        // console.log("Tags encontrados");
         clearInterval(searchTagAll);                             
         for (let i = 0; i < tagAll.length; i++) {                
           if (validacion != undefined){
-            let val = validacion.split(',');
-            switch (val[0]) {
+            let vallAll = validacion.split(',');
+            let textTagAll = tagAll[i].innerText;
+            textTagAll = textTagAll.replace(/(\r\n|\n|\r)/gm, "");
+            textTagAll = textTagAll.replace(/\s+/g, " ");
+            // alert(textTagAll);
+            switch (vallAll[0]) {
               case '==':
-                if (tagAll[i].innerText == val[1]) {
+                if (textTagAll.trim() == vallAll[1]) {
                   _destroyTag(destroy, tagAll[i]);
                 }
               break;
               case '!=':
-                if (tagAll[i].innerText != val[1]) {
+                if (textTagAll.trim() != vallAll[1]) {
                   _destroyTag(destroy, tagAll[i]);
                 }
               break;
@@ -57,13 +72,12 @@ let _searchHideElements = (tagElement, busqueda, validacion, destroy) => {
             }
           }
           else{
-            tagAll[i].remove();
+            _destroyTag(destroy, tagAll[i]);
           }
         }
       }
-
-      else if (stopIntervalAll >= 100) {
-        console.log("Tag no encontrado");
+      if (stopIntervalAll > 40) {
+        // console.log("Tag no encontrado");
         clearInterval(searchTagAll);                             
       }
     }, 50);
@@ -73,20 +87,23 @@ let _searchHideElements = (tagElement, busqueda, validacion, destroy) => {
     let searchTag = setInterval(() => {
       let tag = document.querySelector(tagElement);
       stopInterval = parseInt(stopInterval) + 1;
-      console.log(stopInterval);
-      if (tag != null){
-        console.log("Tag encontrado");
+      if (tag != null ){
+        // console.log("Tag encontrado");
         clearInterval(searchTag);
         if (validacion != undefined) {
           let val = validacion.split(',');
+          let textTag = tag.innerText;
+          textTag = textTag.replace(/(\r\n|\n|\r)/gm, "");
+          textTag = textTag.replace(/\s+/g, " ");
+          // alert(textTag);
           switch (val[0]) {
             case '==':
-              if (tag.innerText == val[1]) {
+              if (textTag.trim() == val[1]) {
                 _destroyTag(destroy, tag);
               }
               break;
             case '!=':
-              if (tag.innerText != val[1]) {
+              if (textTag.trim() != val[1]) {
                 _destroyTag(destroy, tag);
               }
               break;
@@ -95,11 +112,11 @@ let _searchHideElements = (tagElement, busqueda, validacion, destroy) => {
               break;
           }
         } else {
-          tag.remove();
+          _destroyTag(destroy, tag);
         }
       }
-      else if (stopInterval >= 100) {
-        console.log("Tag no encontrado");
+      if (stopInterval > 40) {
+        // console.log("Tag no encontrado");
         clearInterval(searchTag);
       }
     }, 50);
@@ -109,6 +126,15 @@ let _searchHideElements = (tagElement, busqueda, validacion, destroy) => {
 /**
   Recorriendo el Objeto con un Map
 **/
-elmHideTag.elementos.map((index) => {
+elmHideTag.elementos.map((index) => {  
   _searchHideElements(index.tagElement, index.busqueda, index.validacion, index.destroy);
 });
+
+// var scriptHead = document.head.querySelectorAll('script');
+// for (let i = 0; i < scriptHead.length; i++) {
+//   var srcType = scriptHead[i].getAttribute('src');
+
+//   if (srcType == 'http://servicios.movistar.com.pe/images_publica//external-js/ocultar-elementos/js/scripts.js') {
+//     scriptHead[i].remove();
+//   }
+// }
