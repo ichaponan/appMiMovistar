@@ -12,7 +12,7 @@
     right: 0
     width: 100%
     height: 100%
-    z-index: 9999
+    z-index: 99999
     @include section_middle_center
 
     &::before
@@ -37,10 +37,10 @@
         width: 100%
         @include section_middle_center
         img
-          width: 30%
+          width: 25vw
 
       .atm-celuWrapp
-        width: 40%
+        width: 35vw
         position: relative
         @include section_middle_center
 
@@ -71,19 +71,22 @@
       @include section_top_center  
         
       .atm-titulo
-        font-weight: 700
-        font-size: 25px
+        // font-weight: 700
+        font-size: 27px
         color: $skyColor
         width: 100%
         text-align: center
         margin: 10px 0 0
+        letter-spacing: -1px!important
       
       p
         width: 100%
         text-align: center
         margin: 10px 0
+        color: $skyColor
+        font-size: 20px
       
-      button
+      .atm-updateApp
         background-color: $greenColor
         color: $whiteColor
         border: 0px solid 
@@ -93,9 +96,19 @@
         position: relative
         display: block
         transition: all ease-in .4s
+        width: 100%
+        font-size: 18px
         &:active
           transition: all ease-in .4s
           top: 3px
+        
+      .atm-omitir
+        background-color: rgba($whiteColor, 0)
+        border: 0
+        padding-top: 10px
+        font-size: 16px
+        color: $skyColor
+        text-decoration: underline
 
 @media all and (min-width: 480px)
   .wrappCeluAviso
