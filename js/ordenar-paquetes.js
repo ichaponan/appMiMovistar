@@ -1,4 +1,5 @@
 let ordenarPromo = function () {
+  // alert("js externo");
   let contador = 0;
   let searchlistItem = setInterval(() => {
     let listItem = document.getElementsByClassName('list-item');
