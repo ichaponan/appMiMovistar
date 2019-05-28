@@ -163,45 +163,25 @@
     height: 100%
     z-index: 97
 
-  .atm-mejorarPlan
-    background-image: url('http://servicios.movistar.com.pe/images_publica/atm-tutorial/images/icono-footer2.png')
+  .atm-mejorarPlan,
+  .atm-mejorarPlanOverflow
     background-position: top center
     background-repeat: no-repeat
     position: fixed
     left: 17vw
-    // top: 5px
     bottom: -30px
     width: 80px
     padding: 0
     height: 80px
     @include section_top_center
-    // border: 1px solid #333
     border-radius: 50%
     z-index: 98
     overflow: hidden
+  .atm-mejorarPlan,
+    background-image: url('http://servicios.movistar.com.pe/images_publica/atm-tutorial/images/icono-footer.svg')
     background-color: $whiteColor
-    // a
-    //   text-decoration: none
-    //   text-align: center
-    //   margin: 5px 0 0
-    //   padding-top: 30px
-    //   position: relative
-    //   display: block
-    //   width: 100%
-    //   background-color: rgba($whiteColor, 0)
-    //   font-size: 10px
-    //   &::before
-    //     content: ''
-    //     width: 13px
-    //     height: 24px
-    //     position: absolute
-    //     top: 0
-    //     left: 0
-    //     right: 0
-    //     margin: auto
-    //     // background: url('http://servicios.movistar.com.pe/images_publica/atm-tutorial/images/icono-footer.png') no-repeat 
-    //     background-position: top left
-    //     background-size: cover
+  .atm-mejorarPlanOverflow
+    background-image: url('http://servicios.movistar.com.pe/images_publica/atm-tutorial/images/icono-footerOverflow.svg')
 
   .atm-toltip
     position: fixed

@@ -586,8 +586,8 @@
     height: 100%;
     z-index: 97;
   }
-  .atm-mejorarPlan {
-    background-image: url("http://servicios.movistar.com.pe/images_publica/atm-tutorial/images/icono-footer2.png");
+  .atm-mejorarPlan,
+  .atm-mejorarPlanOverflow {
     background-position: top center;
     background-repeat: no-repeat;
     position: fixed;
@@ -616,7 +616,13 @@
     border-radius: 50%;
     z-index: 98;
     overflow: hidden;
+  }
+  .atm-mejorarPlan {
+    background-image: url("http://servicios.movistar.com.pe/images_publica/atm-tutorial/images/icono-footer.svg");
     background-color: #ffffff;
+  }
+  .atm-mejorarPlanOverflow {
+    background-image: url("http://servicios.movistar.com.pe/images_publica/atm-tutorial/images/icono-footerOverflow.svg");
   }
   .atm-toltip {
     position: fixed;
